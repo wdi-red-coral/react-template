@@ -2,9 +2,6 @@
 
 # react-auth-template
 
-A front-end framework template for starting projects with a recent version of
-either the [Rails API Template](https://git.generalassemb.ly/ga-wdi-boston/rails-api-template)
-or the [Express API Template](https://git.generalassemb.ly/ga-wdi-boston/express-api-template).
 
 ## Installation
 
@@ -12,7 +9,7 @@ or the [Express API Template](https://git.generalassemb.ly/ga-wdi-boston/express
 1. Unzip and rename the template directory (`unzip ~/Downloads/react-auth-template-master.zip`).
 1. Move into the new project and `git init`.
 1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace `ga-wdi-boston.react-auth-template` in `package.json` with your
+1. Replace name in `package.json` with your
    projects name.
 1. Replace the `"homepage"` field in `package.json` with your (public) Github
    account name and repository name.
@@ -32,7 +29,6 @@ it runs successfully.
 
 ## About
 
-This template is derived from GA Boston's [react-template](https://git.generalassemb.ly/ga-wdi-boston/react-template).
 Most of the development dependencies, such as linters, SCSS compiler, Webpack
 config, NPM scripts, etc in this repo come from there.
 
@@ -85,7 +81,7 @@ You can add more types by adding more CSS rules in `App.scss`.
 
 In the auth components, flash messages are used in conjunction with the
  `auth/messages` file to select from a list of predefined success/failure
- messages. To undertand how to do this, look at the definition of `flash` in
+ messages. To understand how to do this, look at the definition of `flash` in
  `App.js`, the `signUp` method in `auth/components/SignUp.js`, and the
  `auth/messages.js` file.
 
@@ -94,9 +90,7 @@ In the auth components, flash messages are used in conjunction with the
 
  ### `src/apiConfig.js`
 
- Just like in
-[browser-template](https://git.generalassemb.ly/ga-wdi-boston/browser-template),
-this file will determine whether you're in a production or development
+ This file will determine whether you're in a production or development
 environment and choose an API URL accordingly. Don't forget to replace the
 `production` URL with your deployed API's URL.
 
