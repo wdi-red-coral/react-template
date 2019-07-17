@@ -8,8 +8,7 @@ import SignUp from './auth/components/SignUp'
 import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
-
-import Alert from 'react-bootstrap/Alert'
+import AlertDismissible from './auth/components/AlertDismissible'
 
 class App extends Component {
   constructor () {
@@ -36,11 +35,7 @@ class App extends Component {
       <React.Fragment>
         <Header user={user} />
         {alerts.map((alert, index) => (
-          <Alert key={index} dismissible variant={alert.type}>
-            <Alert.Heading>
-              {alert.message}
-            </Alert.Heading>
-          </Alert>
+          <AlertDismissible key={index} variant={alert.type} message={alert.message} />
         ))}
         <main className="container">
           <Route path='/sign-up' render={() => (
