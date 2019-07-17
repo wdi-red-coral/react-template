@@ -47,7 +47,7 @@ Currently, the top-level `App` component stores the currently authenticated
 user in state, as well as data related to the flash messages. `App` renders the
 `Header` component, and a list of routes, each of which render a component from
 `src/auth/components`. The `auth` directory has two non-component files, `api`
-and `messages`, which contain all the needed `fetch` calls, and messages to
+and `messages`, which contain all the needed `axios` calls, and messages to
 display when API calls succeed or fail, respectively.
 
 We recommend following this pattern in your app. For instance, if you are making
@@ -69,24 +69,6 @@ it, you must pass it the currently authenticated as a prop!**
 
 It supports both the `component=` and `render=` attributes, but like `<Route />`
 it will not forward props to the component if you use `component=`.
-
-### Flash Messages
-
-The `App` component has a rudimentary version of flash messages. To use it,
-pass `this.flash` into a subcomponent of `App` as a prop and call it from there.
-It expects two arguments: a message to display, and a message type, which is one
-of `'flash-success'`, `'flash-warning'`, and `'flash-error'` which make the
-message green, yellow, and red, respectively. You must pass one of these types.
-You can add more types by adding more CSS rules in `App.scss`.
-
-In the auth components, flash messages are used in conjunction with the
- `auth/messages` file to select from a list of predefined success/failure
- messages. To understand how to do this, look at the definition of `flash` in
- `App.js`, the `signUp` method in `auth/components/SignUp.js`, and the
- `auth/messages.js` file.
-
- To change the duration of the message, replace `2000` with a value of your
- choice (in milliseconds) in the `flash` method definition in `App.js`.
 
  ### `src/apiConfig.js`
 
