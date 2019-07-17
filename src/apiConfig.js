@@ -1,7 +1,8 @@
 let apiUrl
+const expressPort = 3000
 const apiUrls = {
   production: 'https://aqueous-atoll-85096.herokuapp.com',
-  development: 'http://localhost:4741'
+  development: `http://localhost:${expressPort}`
 }
 
 if (window.location.hostname === 'localhost') {
