@@ -19,13 +19,22 @@
 
 ## Deployment
 
-Before deploying, you first need to make sure the `homepage` key in your
-`package.json` is pointing to the correct value. It should be the url of your
-deployed application.
+1.  `npm install gh-pages`
+2.  Update package.json with 
+```
+"homepage": "http://<git-name>.github.io/<repo-name>"
+```
+```
+"scripts": {
+  //...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+3.  Run `npm run deploy`
+4.  From then on they only have to run `npm run deploy` from master anytime they need to deploy again.
 
-To deploy you should first make sure you are on the `master` branch with a
-clean working directory, then you can run `npm run deploy` and wait to see if
-it runs successfully.
+See [react gh-pages docs](https://github.com/gitname/react-gh-pages) for more details.
 
 ## About
 
